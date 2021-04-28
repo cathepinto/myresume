@@ -3,6 +3,8 @@
     $visitor_email = $_Post['email'];
     $message = $_Post['message'];
 
+    $email_from = $visitor_email;
+
     $email_subject = "New Form Submission";
 
     $email_body = "User Name: $name.\n".
