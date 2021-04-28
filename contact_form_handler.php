@@ -3,20 +3,11 @@
     $visitor_email = $_Post['email'];
     $message = $_Post['message'];
 
-    $email_subject = "New Form Submission";
+    $form_content="From: $name \n Message: $message";
+    $recipient = 'catarinapinto1991@gmail.com';
+    $subject = "New Form Submission";
+    $mail_header = "From: catarinapinto1991@gmail.com \r\n";
 
-    $email_body = "User Name: $name.\n".
-                    "User Email: $visitor_email.\n".
-                    "User Message": "$message.\n";
-
-    $to = "catarinapinto1991@gmail.com";
-
-    $headers = "From: $email_from \r\n";
-
-    $headers = "Reply-to $visitor_email \r\n";
-
-    mail($to,$email_subject,$email_body,$headers);
-
-    header("Location: index.html");
-
+    mail($recipient, $subject, $form_content, $mail_header) or die("Failed to send! Please try again later.");
+    echo "Thank you for your message!"
 ?>
