@@ -3,8 +3,6 @@
     $visitor_email = $Post['email'];
     $message = $Post['message'];
 
-    $email_from = 'catarinapinto1991@gmail.com';
-
     $email_subject = "New Form Submission";
 
     $email_body = "User Name: $name.\n".
